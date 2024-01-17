@@ -1,0 +1,27 @@
+Welcome to the TCP Socket Programming project in C, where we delve into the world of secure communication between a client and server. In this project, we've crafted a pair of iterative client and server programs that leverage TCP sockets for seamless interaction.
+
+Server-Side Features:
+
+The server patiently awaits client requests, expecting a string representing the user's password.
+Password verification is a robust process, ensuring security through adherence to specific requirements.
+Password requirements include length constraints (8-16 characters) and a mix of characters from at least three of four categories: uppercase alphabet, lowercase alphabet, numeric characters, and special characters (!@#).
+In case of an incorrect password, the server reports back to the client, detailing which requirement(s) failed.
+The server elegantly displays the client's IP, port number, and the received password during verification.
+
+Client-Side Operations:
+
+The client prompts the user to input a password, sending it to the server for verification.
+Upon receiving the result from the server, the client displays it with appropriate formatting.
+The client can repeat the operation until termination is requested by entering the word "done."
+The connection between the client and server remains open, facilitating seamless interactions.
+
+Configuration and Customization:
+
+Command line arguments empower the client to read the server's IP and port number dynamically.
+The server uses command line arguments to specify the port it will listen to, following a standardized format for conflict avoidance.
+
+Educational Insights:
+
+Explore the intricacies of socket programming, TCP communication, and secure password validation in a networked environment.
+Gain hands-on experience in implementing client-server architectures with iterative interactions.
+Feel free to clone this repository, explore the code, and enhance your understanding of network programming in C. Your feedback and contributions are highly valued!
