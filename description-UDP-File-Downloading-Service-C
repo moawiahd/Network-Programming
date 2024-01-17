@@ -1,0 +1,25 @@
+Embark on a journey into the realm of UDP socket programming with our file downloading service implemented in C. This project introduces iterative client and server programs, ensuring a seamless and reliable file transfer experience.
+
+Authentication and Initial Handshake:
+
+The client initiates communication with a "hello" message to the server on port 22334.
+The server responds with a one-byte value (0x55) and awaits acknowledgment (0xAA) from the client.
+After successful authentication, the server compiles a list of files in its working directory and shares it with the client.
+
+File Downloading Workflow:
+
+The client displays the list of available files and prompts the user to choose a filename for downloading.
+Upon the user's selection, the client sends a request to the server containing the chosen filename.
+If the file exists on the server, a one-byte value (1) is sent to the client; otherwise, (0) is sent, and the server awaits future connections.
+For existing files, the server opens the local file and transmits it to the client in chunks of up to 1024 bytes.
+The client saves the received file locally, prompting the user to choose another filename for downloading or enter "done" to exit.
+
+Buffer Size Management:
+
+The client reports and modifies sending and receiving buffer sizes for UDP sockets (SO_SNDBUF and SO_RCVBUF) at the beginning of the program.
+User input allows customization of buffer sizes, ensuring optimal performance and avoiding potential buffer limitations.
+
+Workflow Recap:
+
+The client can repeatedly request file downloads or enter "done" to exit, triggering server termination.
+Robust error handling ensures seamless user interactions and file transfers.
