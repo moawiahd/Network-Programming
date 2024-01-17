@@ -1,0 +1,19 @@
+Dive deeper into network programming with our enhanced project that introduces concurrency and signal handling to the TCP Socket Programming experience.
+
+Concurrency and Signal Handling:
+
+The server has evolved to serve clients concurrently, creating a child process for each client request.
+Parent server gracefully waits for the child to complete processing the client's request and prints the process ID of the terminated child.
+Gain insights into managing concurrent connections and handling signals, making your server robust and responsive.
+The connection between the client and server remains open for subsequent requests, with client termination triggered by the SIGQUIT signal.
+A SIGQUIT signal gracefully terminates the client, accompanied by a notifying message such as "Good bye."
+Server-Side Password Validation:
+
+Building upon the previous requirements, the server enforces stringent password constraints.
+Passwords must be 8-16 characters in length, containing characters from at least three of the following four categories: uppercase alphabet, lowercase alphabet, numeric characters, and special characters (@#$^&*+=).
+Note: The % symbol is not allowed as a special character.
+Educational Experience:
+
+Explore the intricacies of building concurrent servers, managing child processes, and handling signals for enhanced communication.
+Enhance your understanding of secure password validation in a concurrent, networked environment.
+Utilize command line arguments for dynamic configuration and standardized port assignment.
