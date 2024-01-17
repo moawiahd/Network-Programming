@@ -1,0 +1,30 @@
+Embark on an exploration of multi-threaded programming with this sophisticated client-server application. The project centers around counting occurrences of specific characters in a given string, leveraging TCP sockets for seamless communication.
+
+Client-Side:
+
+The client application is multi-threaded, with the main thread gathering user input.
+User input includes two strings: the target string for character counting and a string of characters to be searched for.
+Additional threads are created for each unique character in the second string, responsible for sending TCP requests to the server.
+Each thread appends its unique character to the target string and requests the server to count the occurrences of that specific character.
+Output operations, including character counts and the total sum, are associated with the corresponding thread ID.
+The main thread outputs the total number of counted characters and exits.
+
+Server-Side:
+
+The server application is multi-threaded, creating a new thread for each client request.
+The main thread outputs the number of created threads so far.
+Each server thread receives a string from the client, searches for the last character, and returns the count to the client thread.
+Server threads report their findings on the standard output along with their thread ID.
+The main thread remains open for additional client connections.
+
+Client-Server Communication:
+
+The client and server use TCP sockets for communication.
+Service names rather than port numbers are used for port specification, enhancing code flexibility.
+Hostname-to-IP address conversion and service-to-port conversion are handled using appropriate functions.
+
+Configuration:
+
+Edit the /etc/hosts file on the client machine to specify the server name as "nes416_count_server" with the assigned IP address.
+Edit the /etc/services file on both the client and server machines to specify the port name as "count_port" with an assigned value.
+The server should use the specified port number in the format 55abc, where abc is an arbitrary value.
