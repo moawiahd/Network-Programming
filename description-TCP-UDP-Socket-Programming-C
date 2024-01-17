@@ -1,0 +1,31 @@
+Explore the versatility of TCP and UDP socket programming with I/O multiplexing in this comprehensive C-based project. The client interacts with both UDP and TCP servers, showcasing the power of iterative UDP file downloads and concurrent TCP file uploads.
+
+Project Highlights:
+
+Upon starting the client, a menu is displayed, offering three options:
+1- Download a file using UDP
+Follows a procedure similar to Assignment #4, requesting the server's directory content and downloading files iteratively using UDP.
+2- Upload a file using TCP
+Prompts the user to enter a filename for local upload to the concurrent TCP server, enhancing the file transfer experience.
+3- Quit
+Terminates both the client and servers.
+
+Concurrency and I/O Multiplexing:
+
+The concurrent TCP server facilitates file uploads, with each upload handled by a separate child process.
+The client uses I/O multiplexing to accept/receive input from multiple sources, ensuring enhanced performance and responsiveness.
+
+Server Configuration:
+
+Two servers are provided for testing:
+One working with UDP (similar to Assignment #4).
+One working with TCP, accommodating concurrent file uploads.
+Both servers share the same port for receiving requests, with the port number specified at the command line during server startup.
+
+Client Configuration:
+
+The client takes hostname and port number as command arguments, emphasizing the use of server names in the code rather than IP addresses.
+Edit the /etc/hosts file to specify the server name as "nes416_server" with the assigned IP address.
+Rate Limiting and Buffer Management:
+
+To prevent buffer overflow, the UDP client restricts calls to the server to once every five seconds, ensuring optimal performance.
